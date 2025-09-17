@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://talehi.ir/</loc>
     <lastmod>2025-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://talehi.ir/assets/ali-asghar-talehi-portrait.jpg</image:loc>
+      <image:title>عکس پروفایل علی اصغر طالحی</image:title>
+      <image:caption>دانشجوی مهندسی خودرو | علاقه‌مند به تیونینگ و طراحی با SolidWorks</image:caption>
+    </image:image>
   </url>
 </urlset>
