@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
-  <url>
-    <loc>https://talehi.ir/</loc>
-    <lastmod>2025-09-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://talehi.ir/assets/ali-asghar-talehi-portrait.jpg</image:loc>
-      <image:title>عکس پروفایل علی اصغر طالحی</image:title>
-      <image:caption>دانشجوی مهندسی خودرو | علاقه‌مند به تیونینگ و طراحی با SolidWorks</image:caption>
-    </image:image>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://talehi.ir/</loc>
+        <lastmod>2026-09-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://talehi.ir/#about</loc>
+        <lastmod>2026-09-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://talehi.ir/#career</loc>
+        <lastmod>2026-09-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://talehi.ir/#skills-edu</loc>
+        <lastmod>2026-09-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://talehi.ir/#gallery</loc>
+        <lastmod>2026-09-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://talehi.ir/#contact</loc>
+        <lastmod>2026-09-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
