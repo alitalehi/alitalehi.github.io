@@ -362,7 +362,36 @@
             .career-grid, .skills-edu-grid { grid-template-columns: 1fr; gap: 1.5rem; }
             .contact-grid { grid-template-columns: 1fr; gap: 1rem; }
         }
+/* =========================================
+   ۱. دیزاین منوی بازشونده (Dropdown Menu)
+========================================= */
+.dropdown-menu {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* سایه نرم برای عمق دادن */
+    padding: 8px 0;
+    border: 1px solid #f0f0f0;
+    min-width: 200px;
+    transition: all 0.3s ease;
+    font-family: 'Vazirmatn', 'iranyekan', sans-serif; /* فونت‌های خوانا و مدرن */
+}
 
+/* استایل آیتم‌های داخل منو */
+.dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* حالت هاور (قرار گرفتن موس روی آیتم) */
+.dropdown-menu a:hover {
+    background-color: #EFBF04; /* رنگ اصلی برند */
+    color: #111111;
+}
         @media (max-width: 768px) {
             .nav-links {
                 position: fixed; top: 0; right: -100%; width: 230px; height: 100vh;
@@ -374,6 +403,9 @@
             section { padding: 3.5rem 0; }
             
             .gallery-item { width: 80%; }
+            /* ایجاد فاصله برای تمام سکشن‌ها به جز سکشن هیرو */
+    section:not(.hero-section) {
+        margin-top: 60px; /* فاصله کلی از سکشن بالایی */
         }
     </style>
     <script type="application/ld+json">
