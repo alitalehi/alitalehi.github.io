@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>علی‌اصغر طالحی | مهندسی خودرو و فعالیت‌های حرفه‌ای</title>
     <meta name="description" content="وب‌سایت شخصی علی‌اصغر طالحی، دانشجوی مهندسی خودرو و فعال در حوزه فناوری، قطعات خودرو، بنیان‌گذار شانگهای پارت و رسانه توئین توربو.">
+    <link rel="canonical" href="https://talehi.ir/">
     
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -61,7 +62,7 @@
         html, body {
             width: 100%;
             max-width: 100%;
-            overflow-x: hidden !important; /* جلوگیری قطعیت از اسکرول افقی */
+            overflow-x: hidden !important; 
         }
 
         html {
@@ -69,6 +70,8 @@
             background-color: var(--bg-base);
             color: var(--text-main);
             scroll-behavior: smooth;
+            /* این خط مشکل رفتن سکشن‌ها زیر هدر را بدون نیاز به پدینگ‌های دستی حل می‌کند */
+            scroll-padding-top: 80px; 
             font-size: 16px;
             line-height: 1.6;
         }
@@ -106,8 +109,9 @@
         p { color: var(--text-muted); font-weight: 300; }
 
         .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        
+        /* فاصله استاندارد تمام سکشن‌ها */
         section { padding: 5rem 0; }
-        section#career, section#skills-edu { padding-top: 6rem; }
 
         /* Header */
         header.site-header {
@@ -124,12 +128,12 @@
         .menu-toggle { display: none; background: none; border: none; color: var(--text-main); font-size: 1.5rem; cursor: pointer; padding: 0.25rem; }
 
         /* Hero Section */
-                   .hero { 
-                       display: flex; 
-                       align-items: center; 
-                       padding-top: 5rem; 
-                       padding-bottom: 4rem; 
-                    }
+        .hero { 
+            display: flex; 
+            align-items: center; 
+            padding-top: 7rem; /* فاصله بیشتر برای دسکتاپ به خاطر هدر */
+            padding-bottom: 4rem; 
+        }
         
         .hero-grid {
             display: grid;
@@ -271,7 +275,7 @@
         .footer-links a:hover { color: var(--accent-gold); }
         .copyright { font-size: 0.8rem; color: var(--text-muted); opacity: 0.7; }
 
-        /* Fast Reveal Animations (تغییر جهت افزایش سرعت ظاهر شدن) */
+        /* Fast Reveal Animations */
         .reveal { 
             opacity: 0; 
             transform: translateY(12px); 
@@ -285,88 +289,78 @@
 
         /* Mobile & Tablet Layout Optimization */
         @media (max-width: 992px) {
-           .container { padding: 0 1.25rem; }
-    h1 { font-size: 1.75rem; }
-    h2 { font-size: 1.4rem; margin-bottom: 1.75rem; }
-    
-    /* تنظیمات جدید موبایل بدون 100vh و با فواصل کاملاً فشرده */
-    .hero {
-        height: auto !important;
-        min-height: auto !important;
-        padding-top: 7.5rem;   /* فاصله مناسب از هدر ثابت بالا */
-        padding-bottom: 5rem; /* کاهش فاصله از بخش درباره من */
-        display: block;
-    }
+            .container { padding: 0 1.25rem; }
+            h1 { font-size: 1.75rem; }
+            h2 { font-size: 1.4rem; margin-bottom: 1.75rem; }
+            
+            section { padding: 4rem 0; } /* یکدست شدن فاصله‌ها در موبایل */
+            
+            .hero {
+                padding-top: 7rem;   
+                padding-bottom: 3rem; 
+                display: block;
+            }
 
-    .hero-grid {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 0.75rem; /* فشرده‌تر شدن فاصله بین عکس، متن و دکمه‌ها */
-        text-align: center;
-        height: auto;
-        width: 100%;
-        margin: 0 auto;
-    }
+            .hero-grid {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1.2rem;
+                text-align: center;
+                width: 100%;
+            }
 
-    .hero-image-wrapper {
-        order: 1;
-        justify-content: center;
-        margin: 0 auto;
-        width: 100%;
-    }
-    
-    .hero-image {
-        width: 100px;
-        height: 100px;
-        aspect-ratio: 1/1;
-        border-radius: 50%;
-        box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
-        border: 2px solid var(--accent-gold);
-    }
+            .hero-image-wrapper {
+                order: 1;
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .hero-image {
+                width: 120px;
+                height: 120px;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+                border: 2px solid var(--accent-gold);
+            }
 
-    .hero-content {
-        order: 2;
-        align-items: center;
-        gap: 0.5rem;
-        width: 100%;
-    }
+            .hero-content {
+                order: 2;
+                align-items: center;
+                gap: 0.75rem;
+                width: 100%;
+            }
 
-    .hero-subtitle { font-size: 0.9rem; }
+            .hero-subtitle { font-size: 0.95rem; }
 
-    .hero-text {
-        font-size: 0.9rem;
-        line-height: 1.6;
-        width: 100%;
-        max-width: 100%;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
+            .hero-text {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                width: 100%;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
 
-    .hero-social.social-bar { 
-        order: 3; 
-        justify-content: center; 
-        width: 100%; 
-        gap: 0.5rem;
-        margin-top: 0.2rem;
-    }
+            .hero-social.social-bar { 
+                order: 3; 
+                justify-content: center; 
+                width: 100%; 
+                gap: 0.6rem;
+                margin-top: 0.5rem;
+            }
 
             .social-link {
                 padding: 0.45rem 0.85rem;
-                font-size: 0.8rem;
+                font-size: 0.85rem;
             }
-section#tutorials,
-section#courses,
-section#education {
-    padding-top: 4rem;
-}
+            
             .about-text { border-right: none; padding-right: 0; text-align: justify; font-size: 1rem; }
             .career-grid, .skills-edu-grid { grid-template-columns: 1fr; gap: 1.5rem; }
             .contact-grid { grid-template-columns: 1fr; gap: 1rem; }
-            section#career, section#skills-edu { padding-top: 4rem; }
         }
 
         @media (max-width: 768px) {
@@ -412,7 +406,7 @@ section#education {
     <!-- Header -->
     <header class="site-header" id="header">
         <div class="container header-inner">
-            <a href="#" class="logo">علی‌اصغر طالحی</a>
+            <a href="#hero" class="logo">علی‌اصغر طالحی</a>
             <button class="menu-toggle" id="mobile-menu-btn" aria-label="منوی ناوبری موبایل">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -681,7 +675,7 @@ section#education {
                 });
             }
 
-            // Fast Scroll Reveal Animation (رفع کامل تاخیر ظهور المان‌ها)
+            // Fast Scroll Reveal Animation
             const revealElements = document.querySelectorAll('.reveal');
             const revealOptions = { 
                 threshold: 0.02, 
@@ -701,9 +695,14 @@ section#education {
                 revealOnScroll.observe(el);
             });
 
-            // Lightweight Interactive Background Particles System
+            // Lightweight Interactive Background Particles System (Optimized)
             const canvas = document.getElementById('particles-canvas');
             if (canvas) {
+                // توقف اجرای انیمیشن در صورتی که کاربر حالت کاهش مصرف باتری/موشن را فعال کرده باشد
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    return; 
+                }
+
                 const ctx = canvas.getContext('2d');
                 let particlesArray = [];
                 const particleCount = window.innerWidth < 768 ? 20 : 45;
